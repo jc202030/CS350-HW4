@@ -1,0 +1,31 @@
+Mutation: M2_constant
+Change: 'private const double ImperialFactor = 703;' => 'private const double ImperialFactor = 700;'
+Exit code: 1
+
+  BmiConsole -> C:\Users\jc\Downloads\CS350_HW4_BMI\src\BmiConsole\bin\Debug\net8.0\BmiConsole.dll
+  BmiConsole.Tests -> C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\bin\Debug\net8.0\BmiConsole.Tests.dll
+Test run for C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\bin\Debug\net8.0\BmiConsole.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+  Failed BMICalculatorTests.ImperialExample [4 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Pat\nBMI: 28.6\nCategory: Overweight"
+Not found: "BMI: 28.7"
+  Stack Trace:
+     at BMICalculatorTests.ImperialExample() in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 44
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed BMICalculatorTests.EachHelperFormulaWorks [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values are not within 7 decimal places
+Expected: 28.6938776 (rounded from 28.693877551020407)
+Actual:   28.571428600000001 (rounded from 28.571428571428573)
+  Stack Trace:
+     at BMICalculatorTests.EachHelperFormulaWorks() in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 142
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     2, Passed:    55, Skipped:     0, Total:    57, Duration: 91 ms - BmiConsole.Tests.dll (net8.0)
+
+[xUnit.net 00:00:00.27]     BMICalculatorTests.ImperialExample [FAIL]
+[xUnit.net 00:00:00.27]     BMICalculatorTests.EachHelperFormulaWorks [FAIL]

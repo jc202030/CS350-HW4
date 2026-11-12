@@ -1,0 +1,33 @@
+Mutation: M1_comparison
+Change: 'if (bmi < HealthyCutoff)' => 'if (bmi <= HealthyCutoff)'
+Exit code: 1
+
+  BmiConsole -> C:\Users\jc\Downloads\CS350_HW4_BMI\src\BmiConsole\bin\Debug\net8.0\BmiConsole.dll
+  BmiConsole.Tests -> C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\bin\Debug\net8.0\BmiConsole.Tests.dll
+Test run for C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\bin\Debug\net8.0\BmiConsole.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+  Failed BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 200, weight: 99.920000000000002, bmi: "25.0", category: "Overweight") [2 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Alex\nBMI: 25.0\nCategory: Healthy"
+Not found: "Category: Overweight"
+  Stack Trace:
+     at BMICalculatorTests.MetricExamplesAndRoundedCategory(Double height, Double weight, String bmi, String category) in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 37
+   at InvokeStub_BMICalculatorTests.MetricExamplesAndRoundedCategory(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed BMICalculatorTests.CategoryBoundaries(bmi: 25, category: "Overweight") [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Strings differ
+           â†“ (pos 0)
+Expected: "Overweight"
+Actual:   "Healthy"
+           â†‘ (pos 0)
+  Stack Trace:
+     at BMICalculatorTests.CategoryBoundaries(Double bmi, String category) in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 128
+   at InvokeStub_BMICalculatorTests.CategoryBoundaries(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+Failed!  - Failed:     2, Passed:    55, Skipped:     0, Total:    57, Duration: 116 ms - BmiConsole.Tests.dll (net8.0)
+
+[xUnit.net 00:00:00.25]     BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 200, weight: 99.920000000000002, bmi: "25.0", category: "Overweight") [FAIL]
+[xUnit.net 00:00:00.28]     BMICalculatorTests.CategoryBoundaries(bmi: 25, category: "Overweight") [FAIL]

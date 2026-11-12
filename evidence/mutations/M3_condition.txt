@@ -1,0 +1,71 @@
+Mutation: M3_condition
+Change: 'if (person.UnitSystem == "Metric")\n            bmi = CalculateMetric' => 'if (person.UnitSystem != "Metric")\n            bmi = CalculateMetric'
+Exit code: 1
+
+  BmiConsole -> C:\Users\jc\Downloads\CS350_HW4_BMI\src\BmiConsole\bin\Debug\net8.0\BmiConsole.dll
+  BmiConsole.Tests -> C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\bin\Debug\net8.0\BmiConsole.Tests.dll
+Test run for C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\bin\Debug\net8.0\BmiConsole.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+  Failed BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 170, weight: 70, bmi: "24.2", category: "Healthy") [49 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Alex\nBMI: 1.7\nCategory: Underweight"
+Not found: "BMI: 24.2"
+  Stack Trace:
+     at BMICalculatorTests.MetricExamplesAndRoundedCategory(Double height, Double weight, String bmi, String category) in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 36
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 180, weight: 90, bmi: "27.8", category: "Overweight") [< 1 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Alex\nBMI: 2.0\nCategory: Underweight"
+Not found: "BMI: 27.8"
+  Stack Trace:
+     at BMICalculatorTests.MetricExamplesAndRoundedCategory(Double height, Double weight, String bmi, String category) in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 36
+   at InvokeStub_BMICalculatorTests.MetricExamplesAndRoundedCategory(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 170, weight: 50, bmi: "17.3", category: "Underweight") [< 1 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Alex\nBMI: 1.2\nCategory: Underweight"
+Not found: "BMI: 17.3"
+  Stack Trace:
+     at BMICalculatorTests.MetricExamplesAndRoundedCategory(Double height, Double weight, String bmi, String category) in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 36
+   at InvokeStub_BMICalculatorTests.MetricExamplesAndRoundedCategory(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 170, weight: 100, bmi: "34.6", category: "Obese") [< 1 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Alex\nBMI: 2.4\nCategory: Underweight"
+Not found: "BMI: 34.6"
+  Stack Trace:
+     at BMICalculatorTests.MetricExamplesAndRoundedCategory(Double height, Double weight, String bmi, String category) in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 36
+   at InvokeStub_BMICalculatorTests.MetricExamplesAndRoundedCategory(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 200, weight: 99.920000000000002, bmi: "25.0", category: "Overweight") [< 1 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Alex\nBMI: 1.8\nCategory: Underweight"
+Not found: "BMI: 25.0"
+  Stack Trace:
+     at BMICalculatorTests.MetricExamplesAndRoundedCategory(Double height, Double weight, String bmi, String category) in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 36
+   at InvokeStub_BMICalculatorTests.MetricExamplesAndRoundedCategory(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed BMICalculatorTests.ImperialExample [< 1 ms]
+  Error Message:
+   Assert.Contains() Failure: Sub-string not found
+String:    "Name: Pat\nBMI: 408.2\nCategory: Obese"
+Not found: "BMI: 28.7"
+  Stack Trace:
+     at BMICalculatorTests.ImperialExample() in C:\Users\jc\Downloads\CS350_HW4_BMI\tests\BmiConsole.Tests\BMICalculatorTests.cs:line 44
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     6, Passed:    51, Skipped:     0, Total:    57, Duration: 84 ms - BmiConsole.Tests.dll (net8.0)
+
+[xUnit.net 00:00:00.25]     BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 170, weight: 70, bmi: "24.2", category: "Healthy") [FAIL]
+[xUnit.net 00:00:00.26]     BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 180, weight: 90, bmi: "27.8", category: "Overweight") [FAIL]
+[xUnit.net 00:00:00.26]     BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 170, weight: 50, bmi: "17.3", category: "Underweight") [FAIL]
+[xUnit.net 00:00:00.26]     BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 170, weight: 100, bmi: "34.6", category: "Obese") [FAIL]
+[xUnit.net 00:00:00.26]     BMICalculatorTests.MetricExamplesAndRoundedCategory(height: 200, weight: 99.920000000000002, bmi: "25.0", category: "Overweight") [FAIL]
+[xUnit.net 00:00:00.29]     BMICalculatorTests.ImperialExample [FAIL]
