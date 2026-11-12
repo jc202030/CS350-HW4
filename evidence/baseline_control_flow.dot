@@ -1,0 +1,34 @@
+digraph CFG {
+  rankdir=TB;
+  graph [fontname="Helvetica", bgcolor="white", nodesep=0.21, ranksep=0.26, margin=0.1, splines=polyline];
+  node [fontname="Helvetica", fontsize=9, shape=box, color="black", penwidth=1, margin="0.09,0.05"];
+  edge [fontname="Helvetica", fontsize=8, color="#444444", arrowsize=0.5];
+  Start [label="Start", shape=oval];
+  D1 [label="D1  L9\nUnit = Metric?"];
+  D2 [label="D2  L11\nHeight < 50?"];
+  D3 [label="D3  L11\nHeight > 250?"];
+  D4 [label="D4  L16\nWeight < 20?"];
+  D5 [label="D5  L16\nWeight > 300?"];
+  D6 [label="D6  L23\nUnit = Imperial?"];
+  D7 [label="D7  L25\nHeight < 20?"];
+  D8 [label="D8  L25\nHeight > 100?"];
+  D9 [label="D9  L30\nWeight < 44?"];
+  D10 [label="D10  L30\nWeight > 660?"];
+  Err [label="Print appropriate error\nand return"];
+  Metric [label="L21  Metric BMI"];
+  Imperial [label="L35  Imperial BMI"];
+  Finish [label="L43-45  Round,\ncategory, display"];
+  End [label="End",shape=oval];
+  Start->D1;
+  D1->D2 [label="T"]; D1->D6 [label="F"];
+  D2->Err [label="T"]; D2->D3 [label="F"];
+  D3->Err [label="T"]; D3->D4 [label="F"];
+  D4->Err [label="T"]; D4->D5 [label="F"];
+  D5->Err [label="T"]; D5->Metric [label="F"];
+  D6->D7 [label="T"]; D6->Err [label="F"];
+  D7->Err [label="T"]; D7->D8 [label="F"];
+  D8->Err [label="T"]; D8->D9 [label="F"];
+  D9->Err [label="T"]; D9->D10 [label="F"];
+  D10->Err [label="T"]; D10->Imperial [label="F"];
+  Metric->Finish; Imperial->Finish; Finish->End; Err->End;
+}

@@ -1,0 +1,9 @@
+82814c8 HW4 baseline added bmi calculator
+310330a added bmi tests
+6f52464 added notes for screenshots
+3e03a30 added null input test
+b3b6060 fixed null input
+2fc3cad moved input checks to own method
+2285399 changed numbers to constants
+ad0945b added mutation check script
+6962df3 added more boundary tests
