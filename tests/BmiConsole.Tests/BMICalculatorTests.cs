@@ -80,6 +80,40 @@ public class BMICalculatorTests
     }
 
     [Theory]
+    [InlineData("Metric", 49.9, 90, false)]
+    [InlineData("Metric", 50.0, 90, true)]
+    [InlineData("Metric", 50.1, 90, true)]
+    [InlineData("Metric", 249.9, 90, true)]
+    [InlineData("Metric", 250.0, 90, true)]
+    [InlineData("Metric", 250.1, 90, false)]
+    [InlineData("Metric", 180, 19.9, false)]
+    [InlineData("Metric", 180, 20.0, true)]
+    [InlineData("Metric", 180, 20.1, true)]
+    [InlineData("Metric", 180, 299.9, true)]
+    [InlineData("Metric", 180, 300.0, true)]
+    [InlineData("Metric", 180, 300.1, false)]
+    [InlineData("Imperial", 19.9, 180, false)]
+    [InlineData("Imperial", 20.0, 180, true)]
+    [InlineData("Imperial", 20.1, 180, true)]
+    [InlineData("Imperial", 99.9, 180, true)]
+    [InlineData("Imperial", 100.0, 180, true)]
+    [InlineData("Imperial", 100.1, 180, false)]
+    [InlineData("Imperial", 70, 43.9, false)]
+    [InlineData("Imperial", 70, 44.0, true)]
+    [InlineData("Imperial", 70, 44.1, true)]
+    [InlineData("Imperial", 70, 659.9, true)]
+    [InlineData("Imperial", 70, 660.0, true)]
+    [InlineData("Imperial", 70, 660.1, false)]
+    public void EveryBoundaryBelowAtAbove(string units, double height, double weight, bool valid)
+    {
+        string result = Run(new Person("Boundary", height, weight, units));
+        if (valid)
+            Assert.Contains("BMI:", result);
+        else
+            Assert.Equal("Invalid measurements", result);
+    }
+
+    [Theory]
     [InlineData(18.4, "Underweight")]
     [InlineData(18.5, "Healthy")]
     [InlineData(18.6, "Healthy")]

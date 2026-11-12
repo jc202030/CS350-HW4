@@ -1,0 +1,9 @@
+This is a source-code static review, NOT output from a C# compiler, linter, test runner, or coverage tool.
+Baseline calculator class physical lines including blank lines: 74
+Baseline calculator nonblank lines (including brace-only lines): 69
+Baseline nonblank lines excluding brace-only lines: 43
+Baseline Calculate method lines: 42
+Baseline Calculate CC = 11 (10 decision points + 1) per Homework 4 counting rules.
+Baseline WMC = 18; baseline LCOM = 10 (5 stateless methods, P=10 Q=0).
+Final Calculate CC = 4. Final GetInputError CC = 11. Final WMC = 22, LCOM = 15 (6 stateless methods, P=15 Q=0).
+IMPORTANT: C# tests and mutation runs still need execution on your machine.
