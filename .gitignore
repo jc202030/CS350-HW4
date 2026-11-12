@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+**/TestResults/
+.vs/
+.vscode/
+*.user
+# Test results are saved separately under evidence/ after running locally.
