@@ -95,6 +95,12 @@ public class BMICalculatorTests
     }
 
     [Fact]
+    public void NullPersonThrowsHelpfulArgumentException()
+    {
+        Assert.Throws<ArgumentNullException>(() => new BMICalculator().Calculate(null));
+    }
+
+    [Fact]
     public void EachHelperFormulaWorks()
     {
         var calculator = new BMICalculator();
