@@ -3,6 +3,19 @@ using System.Globalization;
 
 public class BMICalculator
 {
+    private const double MinMetricHeight = 50;
+    private const double MaxMetricHeight = 250;
+    private const double MinMetricWeight = 20;
+    private const double MaxMetricWeight = 300;
+    private const double MinImperialHeight = 20;
+    private const double MaxImperialHeight = 100;
+    private const double MinImperialWeight = 44;
+    private const double MaxImperialWeight = 660;
+    private const double CentimetersPerMeter = 100;
+    private const double ImperialFactor = 703;
+    private const double UnderweightCutoff = 18.5;
+    private const double HealthyCutoff = 25;
+    private const double OverweightCutoff = 30;
     public void Calculate(Person person)
     {
         if (person == null)
@@ -30,16 +43,16 @@ public class BMICalculator
     {
         if (person.UnitSystem == "Metric")
         {
-            if (person.Height < 50 || person.Height > 250)
+            if (person.Height < MinMetricHeight || person.Height > MaxMetricHeight)
                 return "Invalid measurements";
-            if (person.Weight < 20 || person.Weight > 300)
+            if (person.Weight < MinMetricWeight || person.Weight > MaxMetricWeight)
                 return "Invalid measurements";
         }
         else if (person.UnitSystem == "Imperial")
         {
-            if (person.Height < 20 || person.Height > 100)
+            if (person.Height < MinImperialHeight || person.Height > MaxImperialHeight)
                 return "Invalid measurements";
-            if (person.Weight < 44 || person.Weight > 660)
+            if (person.Weight < MinImperialWeight || person.Weight > MaxImperialWeight)
                 return "Invalid measurements";
         }
         else
@@ -51,22 +64,22 @@ public class BMICalculator
 
     public double CalculateMetric(double height, double weight)
     {
-        double meters = height / 100;
+        double meters = height / CentimetersPerMeter;
         return weight / (meters * meters);
     }
 
     public double CalculateImperial(double height, double weight)
     {
-        return 703 * weight / (height * height);
+        return ImperialFactor * weight / (height * height);
     }
 
     public string GetCategory(double bmi)
     {
-        if (bmi < 18.5)
+        if (bmi < UnderweightCutoff)
             return "Underweight";
-        else if (bmi < 25)
+        else if (bmi < HealthyCutoff)
             return "Healthy";
-        else if (bmi < 30)
+        else if (bmi < OverweightCutoff)
             return "Overweight";
         else
             return "Obese";
