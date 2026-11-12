@@ -5,6 +5,9 @@ public class BMICalculator
 {
     public void Calculate(Person person)
     {
+        if (person == null)
+            throw new ArgumentNullException(nameof(person));
+
         double bmi;
         if (person.UnitSystem == "Metric")
         {
