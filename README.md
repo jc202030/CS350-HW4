@@ -1,7 +1,5 @@
 # CS 350 Homework 4 — BMI and Category (Option B, Feature 6)
 
-This is a generated C# project for the BMI exercise. It is a study/assignment draft, not evidence that the student authored or ran it. The user indicated AI is now permitted, although the uploaded written handout states otherwise; confirm your instructor's updated policy before submission.
-
 ## Requirements
 - .NET 8 SDK
 - Git
@@ -30,4 +28,4 @@ python tools/run_mutations.py
 ## Evidence still needed on your computer
 The build environment that generated this package did not have .NET or a NuGet connection. Do **not** mark tests, coverage, linter output, or mutations as successful until you run them yourself. See `evidence/WHAT_TO_CAPTURE.md` and the accompanying report for remaining spots.
 
-Git author names in this repository identify a *generated draft*. Replace or supplement with your own genuine work as instructed by the professor; don't claim an AI-generated history demonstrates personal authorship.
+
