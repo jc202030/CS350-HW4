@@ -25,7 +25,6 @@ python tools/run_mutations.py
 - The baseline method originally had a longer series of `if` validations; subsequent commits add tests and then refactor it.
 - Look at `git log --oneline --reverse` and `git show <hash>:src/BmiConsole/BMICalculator.cs` to see before/after changes.
 
-## Evidence still needed on your computer
-The build environment that generated this package did not have .NET or a NuGet connection. Do **not** mark tests, coverage, linter output, or mutations as successful until you run them yourself. See `evidence/WHAT_TO_CAPTURE.md` and the accompanying report for remaining spots.
+
 
 
